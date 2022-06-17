@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cosmwasm-clicker-game/static/css/main.e7f19cea.chunk.css",
+    "main.js": "/cosmwasm-clicker-game/static/js/main.b1887e26.chunk.js",
+    "main.js.map": "/cosmwasm-clicker-game/static/js/main.b1887e26.chunk.js.map",
+    "runtime-main.js": "/cosmwasm-clicker-game/static/js/runtime-main.eee4ace3.js",
+    "runtime-main.js.map": "/cosmwasm-clicker-game/static/js/runtime-main.eee4ace3.js.map",
+    "static/js/2.a89d032d.chunk.js": "/cosmwasm-clicker-game/static/js/2.a89d032d.chunk.js",
+    "static/js/2.a89d032d.chunk.js.map": "/cosmwasm-clicker-game/static/js/2.a89d032d.chunk.js.map",
+    "index.html": "/cosmwasm-clicker-game/index.html",
+    "static/css/main.e7f19cea.chunk.css.map": "/cosmwasm-clicker-game/static/css/main.e7f19cea.chunk.css.map",
+    "static/js/2.a89d032d.chunk.js.LICENSE.txt": "/cosmwasm-clicker-game/static/js/2.a89d032d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eee4ace3.js",
+    "static/js/2.a89d032d.chunk.js",
+    "static/css/main.e7f19cea.chunk.css",
+    "static/js/main.b1887e26.chunk.js"
+  ]
+}
