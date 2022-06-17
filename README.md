@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# CosmWasm Clicker Game
+## How to Play
+### 1. git clone
+```bash
+git clone git@github.com:dsrvlabs/cosmwasm-front.git
+cd cosmwasm-front
+yarn start
+```
+### 2. Keplr 지갑 설치
+[Keplr wallet extension 설치 - Chrome](https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap?hl=en)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 3. 네트워크 연결
+![](https://user-images.githubusercontent.com/70956926/173027360-10ddfcd8-ec14-429e-9aee-7d652f6a3851.png)
 
-## Available Scripts
+![](https://user-images.githubusercontent.com/70956926/173029587-cba1810c-3a07-4ddd-8345-5c7c0275ac96.png)
 
-In the project directory, you can run:
+💡 게임을 이용하기 위해서는 계정에 잔액이 있어야 합니다. [CosmWasm 101 2편]()을 참고해서 faucet을 요청해주세요.
 
-### `yarn start`
+### 4. Play!
+* Game Start 버튼을 누르면 reset 트랜잭션을 허용하는 창이 뜹니다. reset 트랜잭션이 완료되면 게임이 시작됩니다.
+* 15초 동안 화면에 랜덤으로 나타나는 CosmWasm 아이콘을 클릭하세요! 한 번 클릭할 때마다 점수가 1점씩 올라갑니다.
+* 게임이 종료되면 Transaction 버튼을 눌러 increment 트랜잭션을 실행하세요. Previous score 점수가 업데이트 됩니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](https://user-images.githubusercontent.com/70956926/173031249-ff451b2f-79d5-4b38-be88-d6c163b0cbba.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 구현 단계별 요구사항
+### Step1. Keplr 지갑 연결하기
+* 요구사항 1: Keplr 지갑에 테스트넷 네트워크를 추가하고 연결할 수 있다.
+* 요구사항 2: CONNECT와 DISCONNECT 버튼의 UI 컴포넌트를 구현하고, 버튼을 클릭했을 때 지갑을 연결하고 연결을 해지할 수 있다.
 
-### `yarn test`
+### Step2. 스마트 컨트랙트와 통신하기
+* 요구사항 1: 스마트 컨트랙트를 리팩토링할 수 있다.
+* 요구사항 2: get_count 메소드를 실행하면, 컨트랙트의 현재 count 값을 조회할 수 있다.
+* 요구사항 3: reset 메소드를 실행하면, 컨트랙트의 count 값을 0으로 초기화 할 수 있다.
+* 요구사항 4: increment 메소드를 실행하면, 컨트랙트의 count 값에 획득한 점수를 저장할 수 있다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Step3. Clicker 게임 구현하기
+* 요구사항 1: 플레이 화면 UI 를 구현할 수 있다.
+* 요구사항 2: Game Start 버튼을 눌러 get_count와 reset 메소드를 차례로 실행할 수 있다.
+* 요구사항 3: 게임이 시작되면 15초 동안 화면에 랜덤하게 나타나는 CosmWasm 아이콘을 클릭하여 점수를 획득할 수 있다.
+* 요구사항 4: 게임 종료 후 나타나는 Transaction 버튼의 UI 컴포넌트를 구현하고, 이를 클릭하면 increment 메소드를 실행할 수 있다.
